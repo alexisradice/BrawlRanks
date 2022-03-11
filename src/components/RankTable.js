@@ -37,7 +37,7 @@ const useSortableData = (users, config = null) => {
   return { users: sortedUsers, requestSort, sortConfig };
 };
 
-const DirectoryTable = (props) => {
+const RankTable = (props) => {
   const { users, requestSort, sortConfig } = useSortableData(props.users);
   const { openInNewTab } = props;
   const [searchValue, setSearchValue] = useState("");
@@ -253,4 +253,4 @@ const DirectoryTable = (props) => {
   );
 };
 
-export default DirectoryTable;
+export default RankTable;

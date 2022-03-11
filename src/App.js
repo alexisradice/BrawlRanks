@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
-import DirectoryTable from "./components/DirectoryTable";
+import RankTable from "./components/RankTable";
 import Pagination from "./components/Pagination";
 import axios from "axios";
+
+console.log(process.env.API_URL)
 
 const App = () => {
   const [users, setUsers] = useState([]);
@@ -10,7 +12,7 @@ const App = () => {
   const [usersPerPage] = useState(100);
 
   useEffect(() => {
-    axios("/api/users")
+    axios(process.env.REACT_APP_API_URL)
       .then((response) =>
         response.data.map((user) => ({
           id: user._id,
@@ -62,7 +64,7 @@ const App = () => {
           <option value="23">Season 23</option>
         </select>
       </div>
-      <DirectoryTable users={currentUsers} openInNewTab={openInNewTab} />
+      <RankTable users={currentUsers} openInNewTab={openInNewTab} />
       <Pagination
         usersPerPage={usersPerPage}
         totalUsers={users.length}
