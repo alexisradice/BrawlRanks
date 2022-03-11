@@ -67,7 +67,7 @@ const RankTable = (props) => {
         <table cellSpacing="0">
           <thead>
             <tr>
-            <th>Rank</th>
+              <th>Rank</th>
               <th>
                 <button
                   type="button"
@@ -203,11 +203,7 @@ const RankTable = (props) => {
                 </button>
               </th>
               <th>
-                <button
-                  type="button"
-                >
-                  Hz
-                </button>
+                <button type="button">Hz</button>
               </th>
               <th></th>
             </tr>
@@ -216,10 +212,14 @@ const RankTable = (props) => {
             {updateUsers.length > 0 ? (
               updateUsers.map((user, index) => (
                 <tr key={user.id}>
-                  <td><b>{index + 1}</b></td>
+                  <td>
+                    <b>{index + 1}</b>
+                  </td>
                   <td>
                     <img
-                      src={require("../../img/legends/" + user.pictureMainLevelCharacter.split("/")[5]+".png")}
+                      src={require("../../img/legends/" +
+                        user.pictureMainLevelCharacter.split("/")[5] +
+                        ".png")}
                       alt={user.pictureMainLevelCharacter.split("/")[5]}
                     />
                   </td>
@@ -237,7 +237,8 @@ const RankTable = (props) => {
                   <td>{user.earnings}</td>
                   <td>?</td>
                   <td>
-                    <IconButton style={{ backgroundColor: "#131516", color: "#dee2e6" }}
+                    <IconButton
+                      style={{ backgroundColor: "#131516", color: "#dee2e6" }}
                       aria-label="rocket"
                       onClick={() => {
                         openInNewTab(
@@ -245,7 +246,7 @@ const RankTable = (props) => {
                         );
                       }}
                     >
-                      < RocketLaunchIcon />
+                      <RocketLaunchIcon />
                     </IconButton>
                   </td>
                 </tr>
