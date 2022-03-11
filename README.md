@@ -1,1 +1,1 @@
-# BrawlhallaBestCountryPlayersRanks
+# BrawlRanks
