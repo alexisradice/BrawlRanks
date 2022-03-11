@@ -14,7 +14,7 @@ code {
 }
 
 .container {
-  max-width: 1600px;
+  max-width: 1650px;
   width: 100%;
   margin: auto;
   clear: both;
@@ -34,7 +34,7 @@ header h1 {
 }
 
 table {
-  max-width: 1600px;
+  max-width: 1650px;
   width: 100%;
   margin: auto;
   color: #dee2e6;
@@ -53,7 +53,6 @@ tr:nth-child(even) {
 
 td,
 th {
-  line-height: rem;
   padding: 0px;
 }
 
@@ -104,6 +103,9 @@ thead button.descending::after {
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-family: -apple-system, BlinkMacSystemFont, "Consolas", "Segoe UI", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
 }
 
 .search {
@@ -121,6 +123,9 @@ button {
   padding: 5px;
   color: #dee2e6;
   text-align: start;
+  font-family: -apple-system, BlinkMacSystemFont, "Consolas", "Segoe UI", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .select-season,
@@ -139,6 +144,9 @@ button {
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   margin-right: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Consolas", "Segoe UI", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
 }
 
 .pagination {

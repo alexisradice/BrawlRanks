@@ -68,7 +68,16 @@ const RankTable = (props) => {
         <table cellSpacing="0">
           <thead>
             <tr>
-              <th>Main</th>
+            <th>Rank</th>
+              <th>
+                <button
+                  type="button"
+                  onClick={() => requestSort("mainLevelCharacter")}
+                  className={getClassNamesFor("mainLevelCharacter")}
+                >
+                  Main
+                </button>
+              </th>
               <th>
                 <button
                   type="button"
@@ -171,7 +180,7 @@ const RankTable = (props) => {
                 >
                   Main
                   <br />
-                  Level
+                  (Level)
                 </button>
               </th>
               <th>
@@ -182,7 +191,7 @@ const RankTable = (props) => {
                 >
                   Main
                   <br />
-                  Ranked
+                  (Ranked)
                 </button>
               </th>
               <th>
@@ -194,17 +203,25 @@ const RankTable = (props) => {
                   Earnings
                 </button>
               </th>
+              <th>
+                <button
+                  type="button"
+                >
+                  Hz
+                </button>
+              </th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             {updateUsers.length > 0 ? (
-              updateUsers.map((user) => (
+              updateUsers.map((user, index) => (
                 <tr key={user.id}>
+                  <td><b>{index + 1}</b></td>
                   <td>
                     <img
-                      src={user.pictureMainLevelCharacter}
-                      alt={user.mainLevelCharacter}
+                      src={require("../../img/legends/" + user.pictureMainLevelCharacter.split("/")[5]+".png")}
+                      alt={user.pictureMainLevelCharacter.split("/")[5]}
                     />
                   </td>
                   <td>{user.name}</td>
@@ -219,6 +236,7 @@ const RankTable = (props) => {
                   <td>{user.mainLevelCharacter}</td>
                   <td>{user.mainRankedCharacter}</td>
                   <td>{user.earnings}</td>
+                  <td>?</td>
                   <td>
                     <IconButton style={{ backgroundColor: "#131516", color: "#dee2e6" }}
                       aria-label="rocket"
