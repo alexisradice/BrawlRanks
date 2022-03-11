@@ -4,8 +4,6 @@ import RankTable from "./components/RankTable";
 import Pagination from "./components/Pagination";
 import axios from "axios";
 
-console.log(process.env.API_URL)
-
 const App = () => {
   const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -49,17 +47,19 @@ const App = () => {
     if (newWindow) newWindow.opener = null;
   };
 
-  // pagination
   const indexOfLastUser = currentPage * usersPerPage;
   const indexOfFirstUser = indexOfLastUser - usersPerPage;
   const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
-  // change page
+
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <>
       <Header />
       <div className="container">
+        <select className="select-country">
+          <option value="france">France</option>
+        </select>
         <select className="select-season">
           <option value="23">Season 23</option>
         </select>

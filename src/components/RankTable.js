@@ -220,7 +220,7 @@ const RankTable = (props) => {
                   <td>{user.mainRankedCharacter}</td>
                   <td>{user.earnings}</td>
                   <td>
-                    <IconButton style={{ color: "#dee2e6" }}
+                    <IconButton style={{ backgroundColor: "#131516", color: "#dee2e6" }}
                       aria-label="rocket"
                       onClick={() => {
                         openInNewTab(
@@ -230,20 +230,12 @@ const RankTable = (props) => {
                     >
                       < RocketLaunchIcon />
                     </IconButton>
-                    {/* <IconButton
-                      aria-label="delete"
-                      onClick={() => 
-                        openInNewTab('http://corehalla.com/stats/player/'+ '' + user.brawlID)
-                      }
-                    >
-                      <DeleteIcon />
-                    </IconButton> */}
                   </td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan={5}>No Users</td>
+                <td colSpan={5}>No Players</td>
               </tr>
             )}
           </tbody>
