@@ -174,8 +174,8 @@ const RankTable = (props) => {
               <th>
                 <button
                   type="button"
-                  onClick={() => requestSort("mainLevelCharacter")}
-                  className={getClassNamesFor("mainLevelCharacter")}
+                  onClick={() => requestSort("mainLevelCharacterSort")}
+                  className={getClassNamesFor("mainLevelCharacterSort")}
                 >
                   Main
                   <br />
@@ -185,8 +185,8 @@ const RankTable = (props) => {
               <th>
                 <button
                   type="button"
-                  onClick={() => requestSort("mainRankedCharacter")}
-                  className={getClassNamesFor("mainRankedCharacter")}
+                  onClick={() => requestSort("mainRankedCharacterSort")}
+                  className={getClassNamesFor("mainRankedCharacterSort")}
                 >
                   Main
                   <br />
@@ -213,14 +213,18 @@ const RankTable = (props) => {
               updateUsers.map((user, index) => (
                 <tr key={user.id}>
                   <td>
-                    <b>{index + 1}</b>
+                    <b>{user.franceRank + 1}</b>
                   </td>
                   <td>
                     <img
-                      src={require("../../img/legends/" +
-                        user.pictureMainLevelCharacter.split("/")[5] +
-                        ".png")}
-                      alt={user.pictureMainLevelCharacter.split("/")[5]}
+                      src={window.location.origin + "/img/legends/" +
+                      user.pictureMainLevelCharacter.split("/")[5] +
+                      ".png"}
+                      onError={({ currentTarget }) => {
+                        currentTarget.onerror = null; // prevents looping
+                        currentTarget.src=window.location.origin + "/img/legends/undefined.png";
+                      }}
+                      // alt={"error"}
                     />
                   </td>
                   <td>{user.name}</td>

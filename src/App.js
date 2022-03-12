@@ -12,8 +12,9 @@ const App = () => {
   useEffect(() => {
     axios(process.env.REACT_APP_API_URL)
       .then((response) =>
-        response.data.map((user) => ({
+        response.data.map((user, index) => ({
           id: user._id,
+          franceRank: index,
           name: user.name,
           inGameName: user.inGameName,
           brawlID: user.brawlID,
@@ -24,7 +25,9 @@ const App = () => {
           globalRank: user.globalRank,
           regionRank: user.regionRank,
           mainLevelCharacter: user.mainLevelCharacter,
+          mainLevelCharacterSort: parseInt(user.mainLevelCharacter.split("Lvl")[1].split(" ")[1].slice(0, -1)),
           mainRankedCharacter: user.mainRankedCharacter,
+          mainRankedCharacterSort: parseInt(user.mainRankedCharacter.split("(")[1].slice(0, -1)),
           pictureMainLevelCharacter: user.pictureMainLevelCharacter,
           pictureMainRankedCharacter: user.pictureMainRankedCharacter,
           mainWeapon: user.mainWeapon,
