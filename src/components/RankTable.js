@@ -221,10 +221,9 @@ const RankTable = (props) => {
                       user.pictureMainLevelCharacter.split("/")[5] +
                       ".png"}
                       onError={({ currentTarget }) => {
-                        currentTarget.onerror = null; // prevents looping
+                        currentTarget.onerror = null;
                         currentTarget.src=window.location.origin + "/img/legends/undefined.png";
                       }}
-                      // alt={"error"}
                     />
                   </td>
                   <td>{user.name}</td>
