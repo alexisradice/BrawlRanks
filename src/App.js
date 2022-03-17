@@ -7,7 +7,7 @@ import axios from "axios";
 const App = () => {
   const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [usersPerPage] = useState(100);
+  const [usersPerPage] = useState(200);
 
   useEffect(() => {
     axios(process.env.REACT_APP_API_URL)
