@@ -1,4 +1,4 @@
-# BrawlRanks
+# Brawl Ranks
 
 Rankings of the Best Brawlhalla Players by Country
 
