@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <header>
-      <h1>Best France Brawlhalla Players</h1>
+      <h1>The Best French-Speaking Brawlhalla Players</h1>
     </header>
   );
 };
