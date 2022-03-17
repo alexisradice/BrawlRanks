@@ -34,6 +34,7 @@ const App = () => {
           trueLevel: user.trueLevel,
           passiveAgressive: user.passiveAgressive,
           timePlayed: user.timePlayed,
+          timePlayedSort: parseInt(user.timePlayed.split("h")[0]),
           earnings:
             "$" +
             user.earnings.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,"),

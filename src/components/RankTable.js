@@ -120,8 +120,8 @@ const RankTable = (props) => {
               <th>
                 <button
                   type="button"
-                  onClick={() => requestSort("trueLevel")}
-                  className={getClassNamesFor("trueLevel")}
+                  onClick={() => requestSort("timePlayedSort")}
+                  className={getClassNamesFor("timePlayedSort")}
                 >
                   Time
                   <br />
