@@ -166,3 +166,7 @@ button {
   background-color: #131516;
   border: 1px solid #dee2e6;
 }
+
+a {
+  text-decoration: none;
+}
