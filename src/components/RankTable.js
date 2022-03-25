@@ -109,8 +109,8 @@ const RankTable = (props) => {
               <th>
                 <button
                   type="button"
-                  onClick={() => requestSort("winrate")}
-                  className={getClassNamesFor("winrate")}
+                  onClick={() => requestSort("winrateSort")}
+                  className={getClassNamesFor("winrateSort")}
                 >
                   Winrate
                 </button>
@@ -218,8 +218,8 @@ const RankTable = (props) => {
               <th>
                 <button
                   type="button"
-                  onClick={() => requestSort("clan")}
-                  className={getClassNamesFor("clan")}
+                  onClick={() => requestSort("clanSort")}
+                  className={getClassNamesFor("clanSort")}
                 >
                   Clan
                 </button>

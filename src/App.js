@@ -40,7 +40,9 @@ const App = () => {
             user.earnings.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,"),
           earningsSort: user.earnings,
           winrate: user.winrate,
+          winrateSort: parseInt(user.winrate.split("%")[0].replace('.','')),
           clan: user.clan,
+          clanSort: user.clan.toLowerCase(),
           totalCharactersLevels: user.totalCharactersLevels,
         }))
       )
