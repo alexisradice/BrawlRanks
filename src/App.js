@@ -39,6 +39,9 @@ const App = () => {
             "$" +
             user.earnings.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,"),
           earningsSort: user.earnings,
+          winrate: user.winrate,
+          clan: user.clan,
+          totalCharactersLevels: user.totalCharactersLevels,
         }))
       )
       .then((data) => {

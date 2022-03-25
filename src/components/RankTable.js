@@ -109,6 +109,15 @@ const RankTable = (props) => {
               <th>
                 <button
                   type="button"
+                  onClick={() => requestSort("winrate")}
+                  className={getClassNamesFor("winrate")}
+                >
+                  Winrate
+                </button>
+              </th>
+              <th>
+                <button
+                  type="button"
                   onClick={() => requestSort("trueLevel")}
                   className={getClassNamesFor("trueLevel")}
                 >
@@ -131,22 +140,24 @@ const RankTable = (props) => {
               <th>
                 <button
                   type="button"
-                  onClick={() => requestSort("mainWeapon")}
-                  className={getClassNamesFor("mainWeapon")}
-                >
-                  Main
-                  <br />
-                  Weapon
-                </button>
-              </th>
-              <th>
-                <button
-                  type="button"
                   onClick={() => requestSort("passiveAgressive")}
                   className={getClassNamesFor("passiveAgressive")}
                 >
                   Passive /<br />
                   Agressive
+                </button>
+              </th>
+              <th>
+                <button
+                  type="button"
+                  onClick={() => requestSort("totalCharactersLevels")}
+                  className={getClassNamesFor("totalCharactersLevels")}
+                >
+                  Total
+                  <br />
+                  Legend
+                  <br />
+                  Levels
                 </button>
               </th>
               <th>
@@ -196,14 +207,31 @@ const RankTable = (props) => {
               <th>
                 <button
                   type="button"
+                  onClick={() => requestSort("mainWeapon")}
+                  className={getClassNamesFor("mainWeapon")}
+                >
+                  Main
+                  <br />
+                  Weapon
+                </button>
+              </th>
+              <th>
+                <button
+                  type="button"
+                  onClick={() => requestSort("clan")}
+                  className={getClassNamesFor("clan")}
+                >
+                  Clan
+                </button>
+              </th>
+              <th>
+                <button
+                  type="button"
                   onClick={() => requestSort("earningsSort")}
                   className={getClassNamesFor("earningsSort")}
                 >
                   Earnings
                 </button>
-              </th>
-              <th>
-                <button type="button">Hz</button>
               </th>
               <th></th>
             </tr>
@@ -229,16 +257,18 @@ const RankTable = (props) => {
                   <td>{user.name}</td>
                   <td>{user.rating}</td>
                   <td>{user.peakRating}</td>
+                  <td>{user.winrate}</td>
                   <td>{user.trueLevel}</td>
                   <td>{user.timePlayed}</td>
-                  <td>{user.mainWeapon}</td>
                   <td>{user.passiveAgressive}</td>
+                  <td>{user.totalCharactersLevels}</td>
                   <td>{user.regionRank}</td>
                   <td>{user.globalRank}</td>
                   <td>{user.mainLevelCharacter}</td>
                   <td>{user.mainRankedCharacter}</td>
+                  <td>{user.mainWeapon}</td>
+                  <td>{user.clan}</td>
                   <td>{user.earnings}</td>
-                  <td>?</td>
                   <td>
                     <IconButton
                       style={{ backgroundColor: "#131516", color: "#dee2e6" }}
@@ -256,7 +286,7 @@ const RankTable = (props) => {
               ))
             ) : (
               <tr>
-                <td colSpan={5}>No Players</td>
+                <td colSpan={5}>No Players / Changes in progress</td>
               </tr>
             )}
           </tbody>
