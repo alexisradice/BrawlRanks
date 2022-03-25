@@ -257,16 +257,16 @@ const RankTable = (props) => {
                   <td>{user.name}</td>
                   <td>{user.rating}</td>
                   <td>{user.peakRating}</td>
-                  <td>{user.winrate}</td>
+                  <td>{user.winrate}&nbsp;</td>
                   <td>{user.trueLevel}</td>
-                  <td>{user.timePlayed}</td>
+                  <td>{user.timePlayed}&nbsp;&nbsp;</td>
                   <td>{user.passiveAgressive}</td>
                   <td>{user.totalCharactersLevels}</td>
                   <td>{user.regionRank}</td>
                   <td>{user.globalRank}</td>
                   <td>{user.mainLevelCharacter}</td>
                   <td>{user.mainRankedCharacter}</td>
-                  <td>{user.mainWeapon}</td>
+                  <td>{user.mainWeapon}&nbsp;&nbsp;</td>
                   <td>{user.clan}</td>
                   <td>{user.earnings}</td>
                   <td>
