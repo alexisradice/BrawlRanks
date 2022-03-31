@@ -254,8 +254,8 @@ const RankTable = (props) => {
                       }}
                     />
                   </td>
-                  <td>{user.name}</td>
-                  <td>{user.rating}</td>
+                  <td>{user.name}&nbsp;</td>
+                  <td>{user.rating}&nbsp;</td>
                   <td>{user.peakRating}</td>
                   <td>{user.winrate}&nbsp;</td>
                   <td>{user.trueLevel}</td>

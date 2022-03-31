@@ -70,7 +70,8 @@ const App = () => {
           <option value="france">France</option>
         </select>
         <select className="select-season">
-          <option value="23">Season 23</option>
+          <option value="24">Season 24</option>
+          <option value="23">Season 23 (Comming Soon)</option>
         </select>
       </div>
       <RankTable users={currentUsers} openInNewTab={openInNewTab} />
