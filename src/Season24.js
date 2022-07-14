@@ -10,7 +10,7 @@ const App = () => {
 	const [usersPerPage] = useState(200);
 
 	useEffect(() => {
-		axios(process.env.REACT_APP_API_URL + '/currentSeason')
+		axios(process.env.REACT_APP_API_URL + '/season24')
 			.then((response) =>
 				response.data.map((user, index) => ({
 					id: user._id,
@@ -58,10 +58,10 @@ const App = () => {
 
 	const changeSeason = event => {
 		if (event.target.value == 23)
-			window.location.href = window.location.href + "season23";
-		if (event.target.value == 24)
-			window.location.href = window.location.href + "season24";
-	  };
+			window.location.href = window.location.href.split("/")[0] + "//" + window.location.href.split("/")[2] + "/season23";
+		if (event.target.value == 25)
+			window.location.href = window.location.href.split("/")[0] + "//" + window.location.href.split("/")[2];
+		};
 
 	const indexOfLastUser = currentPage * usersPerPage;
 	const indexOfFirstUser = indexOfLastUser - usersPerPage;
@@ -76,7 +76,7 @@ const App = () => {
 				<select className="select-country">
 					<option value="france">France</option>
 				</select>
-				<select className="select-season" defaultValue={"25"} onChange={changeSeason}>
+				<select className="select-season" defaultValue={"24"} onChange={changeSeason}>
 					<option value="25">Season 25</option>
 					<option value="24">Season 24</option>
 					<option value="23">Season 23</option>
