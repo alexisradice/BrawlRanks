@@ -10,7 +10,7 @@ const App = () => {
 	const [usersPerPage] = useState(200);
 
 	useEffect(() => {
-		axios(process.env.REACT_APP_API_URL + '/season23')
+		axios(process.env.APP_API_URL + '/season23')
 			.then((response) =>
 				response.data.map((user, index) => ({
 					id: user._id,
@@ -59,7 +59,7 @@ const App = () => {
 	const changeSeason = event => {
 		if (event.target.value == 24)
 			window.location.href = window.location.href.split("/")[0] + "//" + window.location.href.split("/")[2] + "/season24";
-		if (event.target.value == 33)
+		if (event.target.value == 34)
 			window.location.href = window.location.href.split("/")[0] + "//" + window.location.href.split("/")[2];
 	  };
 
@@ -77,7 +77,7 @@ const App = () => {
 					<option value="france">France</option>
 				</select>
 				<select className="select-season" defaultValue={"23"} onChange={changeSeason}>
-					<option value="33">Season 33</option>
+					<option value="34">Season 34</option>
 					<option value="24">Season 24</option>
 					<option value="23">Season 23</option>
 				</select>
