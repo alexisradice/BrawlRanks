@@ -10,7 +10,7 @@ const App = () => {
 	const [usersPerPage] = useState(200);
 
 	useEffect(() => {
-		axios(process.env.APP_API_URL + '/season24')
+		axios(process.env.API_URL + '/season24')
 			.then((response) =>
 				response.data.map((user, index) => ({
 					id: user._id,

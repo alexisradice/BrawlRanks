@@ -12,7 +12,7 @@ const App = () => {
 	useEffect(() => {
 		const fetchUsers = async () => {
 			try {
-				const response = await axios.get(`${process.env.APP_API_URL}/currentSeason`);
+				const response = await axios.get(`${process.env.API_URL}/currentSeason`);
 				const data = response.data.map((user, index) => {
 					const mappedUser = {
 						id: user._id || "",
